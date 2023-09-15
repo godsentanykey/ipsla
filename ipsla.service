@@ -1,0 +1,9 @@
+[Unit]
+Description=Ping multiple gateways and add/remove routes
+
+[Service]
+ExecStart=/usr/local/bin/ipsla2.sh -l ~/log/ipsla.log -g 10.10.10.3 10 -g 10.10.10.4 20 -n 26.0.0.0/8
+StandartOutput=null
+
+[Install]
+WantedBy=default.target
